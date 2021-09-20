@@ -98,22 +98,57 @@
       left: 0;
   }
 
-  .footer-container{
-      height: 54px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #232427;
+  .block-container{
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #232427;
+
+
   }
   
   .nametag{
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.281);
+    background-color: rgba(0, 0, 0, 0.5);
     bottom: 0;
     left: 0;
-    padding: 0px 5px ;
+    padding: 2px 5px ;
     z-index: 99;
   }
+
+  .arrow-page p{
+    padding-top: 10px;
+  }
+
+  .freccia{
+    display: inline-block;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 15px solid rgba(255, 255, 255, 0.788);
+    /*padding-bottom: 0px;*/
+
+  }
+
+.freccia-sx{
+  rotate: 90deg;
+    text-align: center;
+}
+
+  .freccia-dx{
+    /*padding-bottom: 0px;*/
+    rotate: -90deg;
+    text-align: center;
+  }
+
+  .arrow-page:hover .freccia{
+    border-top: 15px solid cyan;
+  }
+
+  .first-block{
+    
+  }
+  
   /************************************************
   * Classi Utilities
   ************************************************/
