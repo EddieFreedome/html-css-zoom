@@ -47,6 +47,7 @@
 
   .main-container{
       height: calc(100vh - 45px - 54px);
+      position: relative;
   }
 
 
@@ -54,16 +55,42 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    height: 100%;
+    align-items: flex-start;
   }
 
   .participant{     /*Unita' di spazio*/
     min-width: 200px;
+    max-width: 300px;
     width: calc(100% / 5);
-    height: 150px;
+    height: calc(100% / 5);
+    min-height: 150px;
     border: 1px solid aliceblue;
     flex-shrink: 0;
   }
   
+  .arrow-page{
+      padding: 30px;
+      position: absolute;
+      background-color: #232427;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+  
+  .arrow-right {
+      right: 0;
+}
+  .arrow-left {
+      left: 0;
+  }
+
+  .footer-container{
+      height: 54px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #232427;
+  }
   /*.header-container{
       text-align: right;
       height: 45px;
