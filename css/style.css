@@ -19,10 +19,18 @@
   }
   
   main {
-      padding-bottom: 54px;
+    height: calc(100vh - 45px - 54px);
+    overflow: hidden;
+    display: flex;
   }
   
   footer {
+  }
+
+  .participant img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
   }
   
   /************************************************
@@ -31,7 +39,7 @@
   .container {
     max-width: 80%;
     width: 100%;
-    margin: auto
+    margin: auto;
   }
   
   .header-container{
@@ -39,15 +47,13 @@
     display: flex;
     justify-content: flex-end;
     height: 45px;
+    padding: 12.5px 14px;
   }
 
-  .header-container button{
-      padding: 15px 12.5px;
-  }
 
   .main-container{
-      height: calc(100vh - 45px - 54px);
-      position: relative;
+    height: calc(100% - 45px);
+    position: relative;
   }
 
 
@@ -57,20 +63,28 @@
     flex-wrap: wrap;
     height: 100%;
     align-items: flex-start;
+    overflow: hidden;
   }
 
   .participant{     /*Unita' di spazio*/
     min-width: 200px;
     max-width: 300px;
-    width: calc(100% / 5);
+    width: calc(100% / 5 - 30px); /*per padding frecce*/
     height: calc(100% / 5);
     min-height: 150px;
-    border: 1px solid aliceblue;
+    max-height: 200px;
+    border: 3px solid black;
     flex-shrink: 0;
+    background-color: #232427;
+    transition: border-color 0.3s;
+    position: relative;
   }
   
+  .participant:hover {
+    border-color: rgb(0, 255, 64);
+  }
   .arrow-page{
-      padding: 30px;
+      padding: 30px 14px;
       position: absolute;
       background-color: #232427;
       top: 50%;
@@ -91,29 +105,15 @@
       align-items: center;
       background-color: #232427;
   }
-  /*.header-container{
-      text-align: right;
-      height: 45px;
+  
+  .nametag{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.281);
+    bottom: 0;
+    left: 0;
+    padding: 0px 5px ;
+    z-index: 99;
   }
-  .main-container{
-      height: 100%;
-      width: 100%;
-  }
-
-  .participant-container{
-    display: inline-block;
-    width: calc(100% / 5);
-    max-width: 250px;
-    max-height: 150px;
-  }
-
-  .participant-container img{
-    display: inline-block;
-    background-size: cover;  
-    width: 100%;
-    height: 100%;
-  }
-*/
   /************************************************
   * Classi Utilities
   ************************************************/
