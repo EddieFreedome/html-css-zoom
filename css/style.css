@@ -148,6 +148,10 @@
   .first-block{
     
   }
+
+  .button-container{
+    display: inline-block;
+  }
   
   /************************************************
   * Classi Utilities
